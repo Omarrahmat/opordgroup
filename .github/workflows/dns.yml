@@ -16,6 +16,9 @@ jobs:
           n HTTP_apex "$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' http://opordgroup.com/ 2>&1)"
           n HTTPS_www "$(curl -sS -o /dev/null -w '%{http_code}' https://www.opordgroup.com/ 2>&1)"
           n TITLE "$(curl -sSL http://www.opordgroup.com/ | grep -o '<title>[^<]*' | head -1)"
+      - run: |
+          n(){ echo "::notice title=$1::$(echo "$2" | tr '\n' ' ')"; }
           n INSIGHTS "$(curl -sSL -o /dev/null -w '%{http_code}' https://www.opordgroup.com/insights/)"
           n ARTICLE "$(curl -sSL https://www.opordgroup.com/insights/martyns-law-event-organisers/ | grep -o '<title>[^<]*' | head -1)"
-          n PAGE_cp "$(curl -sSL -o /dev/null -w '%{http_code}' http://www.opordgroup.com/close-protection-london/)"
+          n NAVLINK "$(curl -sSL https://www.opordgroup.com/ | grep -c 'insights/')"
+          n PAGE_cp "$(curl -sSL -o /dev/null -w '%{http_code}' https://www.opordgroup.com/close-protection-london/)"
