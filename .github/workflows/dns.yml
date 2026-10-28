@@ -1,0 +1,16 @@
+name: dns-check
+on: push
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "== A opordgroup.com"; dig +short A opordgroup.com @8.8.8.8
+          echo "== CNAME www"; dig +short CNAME www.opordgroup.com @8.8.8.8
+          echo "== A www"; dig +short A www.opordgroup.com @8.8.8.8
+          echo "== MX"; dig +short MX opordgroup.com @8.8.8.8
+          echo "== NS"; dig +short NS opordgroup.com @8.8.8.8
+          echo "== HTTP www"; curl -sS -o /dev/null -w "%{http_code} %{redirect_url}\n" http://www.opordgroup.com/ || true
+          echo "== HTTP apex"; curl -sS -o /dev/null -w "%{http_code} %{redirect_url}\n" http://opordgroup.com/ || true
+          echo "== HTTPS www"; curl -sS -o /dev/null -w "%{http_code}\n" https://www.opordgroup.com/ || echo "https not ready"
+          echo "== TITLE"; curl -sSL http://www.opordgroup.com/ | grep -o '<title>[^<]*' || true
