@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Notice | Opord Group</title>
+<meta name="description" content="How Opord Group Ltd collects, uses and protects personal information from enquiries, job applications and business contacts.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.opordgroup.com/privacy/">
+<meta property="og:type" content="website"><meta property="og:title" content="Privacy Notice | Opord Group"><meta property="og:description" content="How Opord Group Ltd collects, uses and protects personal information from enquiries, job applications and business contacts."><meta property="og:url" content="https://www.opordgroup.com/privacy/"><meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Crect x='14' y='26' width='72' height='48' rx='24' fill='none' stroke='%23fff' stroke-width='12'/%3E%3C/svg%3E">
+<style>
+:root{
+  --gutter:clamp(20px,5vw,72px);
+  --line:rgba(255,255,255,.22);
+  --muted:rgba(255,255,255,.68);
+  --dim:rgba(255,255,255,.45);
+  --blue:#00d4ff;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#000;color:#fff;font-family:'Barlow',Arial,Helvetica,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+::selection{background:#fff;color:#000}
+
+/* ---------- Header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;transition:transform .5s var(--ease),background .35s}
+.hdr.hide{transform:translateY(-100%)}
+.hdr.solid{background:rgba(0,0,0,.92)}
+.hdr__in{height:96px;display:flex;align-items:center;gap:52px;padding:0 var(--gutter)}
+.hdr__logo{width:168px;flex:0 0 auto}
+.hdr__nav{display:flex;gap:28px}
+.hdr__nav a,.hdr__link{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;position:relative;padding:6px 0;white-space:nowrap}
+.hdr__nav a::after,.hdr__link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.hdr__nav a:hover::after,.hdr__link:hover::after{transform:scaleX(1)}
+.hdr__right{margin-left:auto;display:flex;align-items:center;gap:26px}
+.burger{width:40px;height:40px;background:none;border:0;cursor:pointer;position:relative}
+.burger span{position:absolute;left:8px;right:8px;height:2px;background:#fff}
+.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:19px}.burger span:nth-child(3){top:25px}
+
+/* ---------- Drawer ---------- */
+.scrim{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .45s}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:70;width:min(420px,100%);background:#000;padding:110px 48px 40px;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .55s var(--ease);overflow-y:auto}
+.drawer__x{position:absolute;top:30px;right:calc(var(--gutter) - 6px);width:40px;height:40px;background:none;border:0;cursor:pointer}
+.drawer__x::before,.drawer__x::after{content:"";position:absolute;left:9px;right:9px;top:19px;height:2px;background:#fff;transform:rotate(45deg)}
+.drawer__x::after{transform:rotate(-45deg)}
+.drawer nav a{display:block;text-align:right;padding:17px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:opacity .3s}
+.drawer nav a:hover{opacity:.55}
+.drawer__foot{margin-top:auto;padding-top:40px;text-align:right;font-size:13px;color:var(--muted);line-height:2}
+body.menu .scrim{opacity:1;pointer-events:auto}
+body.menu .drawer{transform:none}
+
+/* ---------- Panels ---------- */
+.panel{position:relative;height:100vh;height:100svh;min-height:620px;overflow:hidden;background:#000}
+.panel__bg{position:absolute;inset:0;z-index:0}
+.panel::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.25) 42%,transparent 65%),linear-gradient(90deg,rgba(0,0,0,.55),transparent 55%)}
+.panel__content{position:absolute;z-index:2;left:var(--gutter);right:var(--gutter);bottom:clamp(64px,12vh,130px);max-width:700px}
+.kicker{font-size:15px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.title{font-size:clamp(32px,4.2vw,54px);font-weight:700;line-height:1.08;letter-spacing:.01em;text-transform:uppercase}
+.hero .title{font-size:clamp(36px,5vw,66px)}
+.hero__logo{width:clamp(170px,17vw,240px);margin-bottom:34px}
+.sx-btn{display:inline-block;margin-top:28px;padding:16px 34px;border:2px solid #fff;background:transparent;color:#fff;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .3s,color .3s}
+.sx-btn:hover{background:#fff;color:#000}
+.sx-btn--fill{background:#fff;color:#000}
+.sx-btn--fill:hover{background:transparent;color:#fff}
+.sx-btn--sm{margin-top:0;padding:10px 22px;font-size:12px}
+.scroll{position:absolute;z-index:2;left:50%;bottom:22px;width:28px;margin-left:-14px;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ---------- Background art ---------- */
+.bg-moon{background:radial-gradient(1000px 700px at 75% 35%,rgba(255,255,255,.07),transparent 60%),linear-gradient(180deg,#000,#050608)}
+.bg-night{background:radial-gradient(1400px 600px at 60% 100%,rgba(255,170,90,.10),transparent 60%),linear-gradient(180deg,#000 0%,#07080b 70%,#0c0b0a 100%)}
+.bg-map{background:radial-gradient(900px 600px at 70% 45%,rgba(255,255,255,.05),transparent 65%),#030303}
+.bg-ops{background:#020202}
+.bg-thermal{background:radial-gradient(1200px 700px at 70% 100%,rgba(255,255,255,.10),transparent 60%),#000}
+.stars{position:absolute;inset:0;width:100%;height:100%}
+
+.moon{position:absolute;width:min(780px,72vw);aspect-ratio:1;right:-6%;top:5%;border-radius:50%;overflow:hidden;
+  background:radial-gradient(circle at 34% 30%,#f5f5f2 0%,#dcdcd8 24%,#b0b0ac 48%,#6a6a67 68%,#262626 84%,#111 100%);
+  box-shadow:0 0 120px 18px rgba(255,255,255,.16),0 0 340px 70px rgba(255,255,255,.06);animation:rise 2.6s var(--ease) both}
+.moon__surface{position:absolute;inset:0;opacity:.42;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.1);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .02' numOctaves='5' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 .1  0 0 0 0 .1  0 0 0 0 .1  0 0 0 1.6 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+  background-size:600px 600px;animation:spin 140s linear infinite}
+.moon__craters{position:absolute;inset:0;mix-blend-mode:multiply;
+  background:
+   radial-gradient(ellipse 22% 16% at 30% 34%,rgba(70,70,70,.55),transparent 70%),
+   radial-gradient(ellipse 18% 22% at 48% 50%,rgba(80,80,80,.45),transparent 70%),
+   radial-gradient(ellipse 14% 10% at 38% 62%,rgba(70,70,70,.5),transparent 70%),
+   radial-gradient(ellipse 12% 14% at 60% 30%,rgba(90,90,90,.4),transparent 70%),
+   radial-gradient(circle at 22% 52%,transparent 0 2.4%,rgba(0,0,0,.35) 2.8%,transparent 3.6%),
+   radial-gradient(circle at 44% 22%,transparent 0 1.8%,rgba(0,0,0,.35) 2.2%,transparent 2.9%),
+   radial-gradient(circle at 56% 66%,transparent 0 3%,rgba(0,0,0,.3) 3.5%,transparent 4.4%),
+   radial-gradient(circle at 34% 78%,transparent 0 1.6%,rgba(0,0,0,.35) 2%,transparent 2.6%),
+   radial-gradient(circle at 64% 46%,transparent 0 1.4%,rgba(0,0,0,.3) 1.8%,transparent 2.4%)}
+.moon__shade{position:absolute;inset:0;background:radial-gradient(circle at 82% 84%,rgba(0,0,0,.96) 30%,rgba(0,0,0,.5) 50%,transparent 68%)}
+@keyframes rise{from{transform:translateY(12%) scale(.96);opacity:0}}
+@keyframes spin{to{background-position:600px 0}}
+.reticle{position:absolute;width:clamp(130px,14vw,200px);right:24%;top:24%;color:var(--blue);opacity:.85;filter:drop-shadow(0 0 6px rgba(0,212,255,.7));animation:aim 14s ease-in-out infinite}
+.reticle .spin{transform-origin:100px 100px;animation:rot 24s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+@keyframes aim{0%,100%{transform:translate(0,0)}33%{transform:translate(-40px,30px)}66%{transform:translate(25px,-20px)}}
+
+.sky{position:absolute;left:0;bottom:0;width:100%;height:min(66vh,620px)}
+.sky .wins rect{fill:#ffd7a0}
+.sky .wins rect.tw{animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:var(--o,.6)}50%{opacity:.05}}
+.sky--thermal .b{fill:url(#hot);stroke:#fff;filter:drop-shadow(0 0 6px rgba(255,255,255,.6))}
+.sky--thermal .b g{stroke:#fff}
+.sky--thermal .wins rect{fill:#fff}
+.sky .trk{animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.fog{position:absolute;left:-20%;right:-20%;bottom:0;height:38vh;background:radial-gradient(40% 60% at 20% 100%,rgba(255,255,255,.07),transparent 70%),radial-gradient(35% 50% at 70% 100%,rgba(255,255,255,.06),transparent 70%);animation:fog 30s ease-in-out infinite alternate}
+@keyframes fog{to{transform:translateX(8%)}}
+.beams{position:absolute;inset:0}
+.beam{position:absolute;bottom:0;width:240px;height:150vh;transform-origin:50% 100%;background:linear-gradient(to top,rgba(255,255,255,.16),rgba(255,255,255,.03) 60%,transparent 85%);clip-path:polygon(47% 100%,53% 100%,100% 0,0 0);filter:blur(8px);mix-blend-mode:screen}
+.b1{left:58%;animation:sw 13s ease-in-out infinite}
+.b2{left:76%;animation:sw 17s ease-in-out infinite reverse}
+.b3{left:40%;animation:sw 21s ease-in-out infinite;opacity:.6}
+@keyframes sw{0%,100%{transform:rotate(-28deg)}50%{transform:rotate(24deg)}}
+.thermal-fx{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px),radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.85) 100%)}
+.thermal-fx span{position:absolute;top:120px;right:var(--gutter);font-size:12px;font-weight:600;letter-spacing:.2em;opacity:.7}
+.thermal-fx span+span{top:142px;opacity:.45}
+
+.map{position:absolute;inset:0;width:100%;height:100%}
+.map--faint{opacity:.3}
+.map .route{stroke-dasharray:1200;stroke-dashoffset:1200;filter:drop-shadow(0 0 6px var(--blue));animation:draw 9s linear infinite}
+@keyframes draw{0%{stroke-dashoffset:1200}70%,100%{stroke-dashoffset:0}}
+.map .convoy{filter:drop-shadow(0 0 8px var(--blue))}
+.map .pulse{transform-origin:770px 330px;animation:mp 2s ease-out infinite}
+@keyframes mp{from{transform:scale(.5);opacity:1}to{transform:scale(2.4);opacity:0}}
+.radar{position:absolute;width:min(92vh,860px);aspect-ratio:1;right:-10%;top:50%;transform:translateY(-50%);border-radius:50%;
+  background:repeating-radial-gradient(circle,transparent 0 69px,rgba(255,255,255,.14) 69px 70px),
+    linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)) center/1px 100% no-repeat,
+    linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)) center/100% 1px no-repeat;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.radar .sweep{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(0,212,255,.45),rgba(0,212,255,.08) 40deg,transparent 70deg);animation:rot 5s linear infinite}
+.radar i{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 12px var(--blue);animation:blip 5s ease-out infinite}
+@keyframes blip{0%{opacity:0}5%{opacity:1}60%,100%{opacity:0}}
+
+/* ---------- Content sections ---------- */
+.sec{padding:clamp(90px,14vh,150px) 0;border-top:1px solid rgba(255,255,255,.08)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--gutter)}
+.lead{margin-top:20px;max-width:620px;font-size:17px;color:var(--muted)}
+.spec{margin-top:56px;border-top:1px solid var(--line)}
+.spec__row{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.spec__row h3{font-size:15px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.spec__row p{font-size:16px;color:var(--muted)}
+.spec--kv .spec__row{grid-template-columns:1fr auto}
+.spec--kv .spec__row p{color:#fff;font-weight:600;text-align:right}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:56px}
+.stat{border-top:2px solid #fff;padding-top:22px}
+.stat b{display:block;font-size:clamp(44px,5.5vw,72px);font-weight:700;line-height:1}
+.stat span{display:block;margin-top:12px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:center}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:56px}
+.step{border-top:2px solid #fff;padding-top:22px}
+.step i{font-style:normal;font-size:13px;font-weight:600;color:var(--dim);letter-spacing:.06em}
+.step h3{margin:12px 0 10px;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.step p{font-size:15.5px;color:var(--muted)}
+.uk{width:100%;max-width:420px;margin:0 auto}
+.uk .land{fill:none;stroke:rgba(255,255,255,.4);stroke-width:1.4}
+.uk .dot{fill:#fff}
+.uk .ring{fill:none;stroke:#fff;stroke-width:1;transform-origin:center;transform-box:fill-box;animation:ping 2.8s var(--ease) infinite}
+.uk g:nth-of-type(3n) .ring{animation-delay:.9s}
+.uk g:nth-of-type(3n+1) .ring{animation-delay:1.8s}
+.uk text{fill:rgba(255,255,255,.75);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-family:'Barlow',sans-serif}
+.uk .ldn .dot{fill:var(--blue)}.uk .ldn .ring{stroke:var(--blue)}.uk .ldn text{fill:#fff;font-weight:700}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(3.4);opacity:0}}
+.role{grid-template-columns:1.3fr 1fr 1fr auto!important;align-items:center!important}
+.role p{font-size:14px!important;text-transform:uppercase;letter-spacing:.05em}
+
+/* Forms */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:28px 30px;margin-top:56px}
+.field{display:flex;flex-direction:column;gap:10px}
+.field.full,.consent,.form__actions,.form__ok{grid-column:1/-1}
+.field label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;color:#fff;font:400 17px 'Barlow',sans-serif;padding:10px 0 12px;outline:none;-webkit-appearance:none;appearance:none;transition:border-color .3s}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23fff' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 2px center;cursor:pointer}
+.field select option{background:#111}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#fff}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.3)}
+.consent{display:flex;gap:14px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.consent input{margin-top:4px;width:16px;height:16px;flex:0 0 16px;accent-color:#fff}
+.form__actions{display:flex;flex-wrap:wrap;gap:16px}
+.form__actions .sx-btn{margin-top:0}
+.form__ok{display:none;padding:20px 22px;border:1px solid var(--line)}
+.form.sent .form__ok{display:block}
+
+/* FAQ */
+.faq{margin-top:56px;border-top:1px solid var(--line);max-width:960px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 50px 24px 0;position:relative;font-size:16px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before,.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:16px;height:2px;background:#fff;transition:transform .35s var(--ease)}
+.faq summary::after{transform:rotate(90deg)}
+.faq details[open] summary::after{transform:rotate(0)}
+.faq details p{padding:0 0 26px;color:var(--muted);font-size:16.5px;max-width:760px}
+
+/* Footer */
+.foot{border-top:1px solid rgba(255,255,255,.08);padding:34px var(--gutter);display:flex;justify-content:center;flex-wrap:wrap;gap:12px 30px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+.foot a{transition:color .3s}
+.foot a:hover{color:#fff}
+.foot .legal{flex-basis:100%;text-align:center;font-weight:500;letter-spacing:.03em;text-transform:none;color:rgba(255,255,255,.38)}
+
+/* WhatsApp */
+.wa{position:fixed;right:22px;bottom:22px;z-index:45;width:62px;height:62px;border-radius:50%;background:#000;border:1.5px solid #fff;color:#fff;display:grid;place-items:center;
+  box-shadow:0 0 18px rgba(255,255,255,.55),inset 0 0 12px rgba(255,255,255,.25);animation:waGlow 2.4s ease-out infinite;transition:transform .3s}
+.wa:hover{transform:scale(1.07)}
+.wa__label{transition:opacity .3s}
+.wa.compact .wa__label{opacity:0;pointer-events:none}
+.wa svg{width:30px;height:30px;filter:drop-shadow(0 0 4px #fff) drop-shadow(0 0 10px rgba(255,255,255,.8))}
+.wa__label{position:absolute;right:76px;white-space:nowrap;background:#000;border:1px solid rgba(255,255,255,.4);padding:9px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 0 8px rgba(255,255,255,.7)}
+@keyframes waGlow{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6),0 0 18px rgba(255,255,255,.55),inset 0 0 12px rgba(255,255,255,.25)}
+  70%{box-shadow:0 0 0 18px rgba(255,255,255,0),0 0 34px rgba(255,255,255,.85),inset 0 0 12px rgba(255,255,255,.25)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0),0 0 18px rgba(255,255,255,.55),inset 0 0 12px rgba(255,255,255,.25)}}
+
+/* Reveal */
+.r{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.r.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .r{opacity:1;transform:none}
+}
+@media (max-width:1100px){.hdr__nav{display:none}}
+@media (max-width:820px){
+  .hdr__in{height:76px}
+  .hdr__logo{width:136px}
+  .sky{height:52vh}
+  .moon{width:120vw;right:-58vw;top:8%;opacity:.75}
+  .reticle{right:6%;top:16%;opacity:.55}
+  .radar{width:130vw;right:-60vw}
+  .panel::after{background:linear-gradient(0deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.15) 100%)}
+  .spec__row,.role{grid-template-columns:1fr!important;gap:8px}
+  .spec--kv .spec__row{grid-template-columns:1fr auto!important}
+  .stats{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .wa__label{display:none}
+  .wa{width:56px;height:56px;right:16px;bottom:16px}
+  .sky--thermal{opacity:.7}
+  .thermal-fx span{top:96px}.thermal-fx span+span{top:118px}
+}
+@media (max-width:600px){
+  .steps,.form{grid-template-columns:1fr}
+  .hdr__link{display:none}
+  .drawer{padding:96px 28px 32px}
+}
+
+/* =========== COLOUR GRADE: cinematic panels =========== */
+/* Close Protection: deep-blue night city with sodium street glow */
+.bg-map{background:radial-gradient(900px 620px at 74% 40%,rgba(0,110,255,.28),transparent 62%),radial-gradient(900px 520px at 18% 100%,rgba(255,120,40,.20),transparent 62%),linear-gradient(180deg,#020713 0%,#03091a 60%,#060a12 100%)}
+.citylights{position:absolute;inset:0;mix-blend-mode:screen;
+  background:radial-gradient(260px 160px at 54% 37%,rgba(255,170,70,.30),transparent 70%),radial-gradient(320px 200px at 74% 45%,rgba(255,150,60,.26),transparent 70%),radial-gradient(240px 160px at 86% 58%,rgba(120,180,255,.30),transparent 70%),radial-gradient(400px 220px at 60% 55%,rgba(255,110,40,.16),transparent 70%);
+  animation:flick 7s ease-in-out infinite alternate}
+@keyframes flick{to{opacity:.75}}
+.bg-map .streets{stroke:rgba(255,176,96,.16)}
+.bg-map .streets path[stroke]{stroke:rgba(255,196,120,.42);filter:drop-shadow(0 0 3px rgba(255,150,60,.6))}
+.bg-map .river-edge{stroke:rgba(80,170,255,.45);filter:drop-shadow(0 0 10px rgba(0,140,255,.55))}
+.bg-map .river{stroke:#041a3d}
+
+/* Private Events: London dusk with coloured searchlights */
+.bg-night{background:radial-gradient(150% 88% at 62% 100%,#ff8a33 0%,#ef5a4e 14%,#b42f6e 28%,#5c1f78 44%,#24104f 60%,#0b0726 78%,#03020a 100%)}
+#event-security::after{background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.1) 30%,transparent 50%),linear-gradient(90deg,rgba(0,0,0,.6),transparent 50%)}
+#event-security .sky .b{fill:#07050d}
+#event-security .sky .b{fill:url(#bfill);stroke:rgba(255,190,140,.22)}
+#event-security .fog{background:radial-gradient(40% 60% at 25% 100%,rgba(255,140,90,.18),transparent 70%),radial-gradient(35% 50% at 72% 100%,rgba(255,90,160,.14),transparent 70%)}
+.b1{background:linear-gradient(to top,rgba(255,70,190,.36),rgba(255,70,190,.06) 60%,transparent 85%)}
+.b2{background:linear-gradient(to top,rgba(255,206,90,.36),rgba(255,206,90,.06) 60%,transparent 85%)}
+.b3{background:linear-gradient(to top,rgba(0,212,255,.34),rgba(0,212,255,.06) 60%,transparent 85%);opacity:.85}
+#event-security .sky .wins rect{fill:#ffcf8a}
+
+/* Operations: deep ocean-blue with violet aurora */
+.bg-ops{background:radial-gradient(900px 720px at 82% 50%,rgba(0,96,220,.40),transparent 64%),radial-gradient(800px 520px at 8% 100%,rgba(130,50,220,.30),transparent 62%),linear-gradient(180deg,#01030c,#020617)}
+.aurora{position:absolute;left:-10%;right:-10%;top:-10%;height:70%;filter:blur(40px);opacity:.55;mix-blend-mode:screen;
+  background:radial-gradient(40% 50% at 30% 40%,rgba(0,255,200,.35),transparent 70%),radial-gradient(35% 45% at 60% 30%,rgba(120,80,255,.40),transparent 70%),radial-gradient(30% 40% at 85% 45%,rgba(0,160,255,.35),transparent 70%);
+  animation:aur 18s ease-in-out infinite alternate}
+@keyframes aur{to{transform:translateX(6%) skewX(-6deg)}}
+.river-ops{stroke:rgba(0,180,255,.35)}
+.radar .hot{background:#ff7a12;box-shadow:0 0 14px #ff7a12,0 0 30px rgba(255,122,18,.6)}
+
+/* Careers: real thermal (ironbow) palette */
+.bg-thermal{background:radial-gradient(1200px 700px at 70% 100%,rgba(140,20,160,.45),transparent 62%),linear-gradient(180deg,#05010f 0%,#0d0424 55%,#1a0634 100%)}
+.sky--thermal .b{fill:url(#hot);stroke:rgba(255,226,150,.9);filter:drop-shadow(0 0 8px rgba(255,120,30,.55))}
+.sky--thermal .b g{stroke:rgba(255,190,90,.85)}
+.sky--thermal .wins rect{fill:#fffbe0}
+.sky--thermal .trk{stroke:#fffbe0}
+.thermal-fx .scale{position:absolute;right:var(--gutter);top:180px;width:10px;height:200px;background:linear-gradient(180deg,#fffbe0,#ffd84a 18%,#ff7a12 42%,#d4145a 68%,#3a0a5e);box-shadow:0 0 12px rgba(255,120,30,.4)}
+.thermal-fx .scale em{position:absolute;right:18px;font-style:normal;font-size:11px;font-weight:600;letter-spacing:.1em}
+.thermal-fx .scale em:first-child{top:-4px}.thermal-fx .scale em:last-child{bottom:-4px;opacity:.6}
+@media (max-width:820px){.thermal-fx .scale{top:150px;height:140px}}
+
+.page-hero{height:72vh;height:72svh;min-height:520px}
+.prose{max-width:820px}
+.prose h2{font-size:clamp(24px,2.6vw,34px);font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.15;margin:64px 0 18px}
+.prose p{font-size:17.5px;color:rgba(255,255,255,.78);margin:0 0 16px}
+.prose ul{margin:6px 0 18px;padding:0;list-style:none;border-top:1px solid var(--line)}
+.prose li{padding:14px 0 14px 28px;border-bottom:1px solid var(--line);position:relative;font-size:16.5px;color:rgba(255,255,255,.85)}
+.prose li::before{content:"";position:absolute;left:0;top:24px;width:14px;height:2px;background:var(--blue)}
+.prose .intro{font-size:20px;color:#fff;max-width:760px}
+.crumbs{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:28px}
+.crumbs a:hover{color:#fff}
+.cta{padding:clamp(80px,12vh,130px) 0;border-top:1px solid rgba(255,255,255,.08);background:radial-gradient(700px 360px at 50% 60%,rgba(0,140,255,.14),transparent 70%)}
+.cta .wrap{text-align:center}
+.cta .lead{margin-left:auto;margin-right:auto}
+.cta .acts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:40px}
+.related a{padding:22px 18px 22px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.related a:hover{color:var(--blue)}
+@media (max-width:820px){.related{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="wordmark" viewBox="0 0 640 100">
+      <g fill="none" stroke="currentColor" stroke-width="20">
+        <rect x="10" y="10" width="110" height="80" rx="40"/>
+        <path d="M165 0V100M165 10H205A30 30 0 0 1 205 70H185"/>
+        <rect x="275" y="10" width="110" height="80" rx="40"/>
+        <path d="M430 0V100M430 10H470A30 30 0 0 1 470 70H430M462 70L500 100"/>
+        <path d="M540 0V100M540 10H590A40 40 0 0 1 630 50A40 40 0 0 1 590 90H540"/>
+      </g>
+    </symbol>
+    <clipPath id="ujs"><rect width="60" height="30"/></clipPath>
+    <clipPath id="ujt"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath>
+    <symbol id="flag" viewBox="0 0 60 30">
+      <g clip-path="url(#ujs)">
+        <rect width="60" height="30" fill="currentColor"/>
+        <path d="M0 0L60 30M60 0L0 30" stroke="#000" stroke-width="6"/>
+        <path d="M0 0L60 30M60 0L0 30" clip-path="url(#ujt)" stroke="currentColor" stroke-width="4"/>
+        <path d="M30 0v30M0 15h60" stroke="#000" stroke-width="10"/>
+        <path d="M30 0v30M0 15h60" stroke="currentColor" stroke-width="6"/>
+      </g>
+    </symbol>
+    <symbol id="lockup" viewBox="0 0 640 330">
+      <use href="#wordmark" x="0" y="0" width="640" height="100"/>
+      <text x="320" y="190" text-anchor="middle" fill="currentColor" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="66" letter-spacing="4">GROUP</text>
+      <use href="#flag" x="248" y="214" width="144" height="88"/>
+    </symbol>
+    <linearGradient id="bfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151515"/><stop offset="1" stop-color="#030303"/></linearGradient>
+    <linearGradient id="hot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffbe0"/><stop offset=".18" stop-color="#ffd84a"/><stop offset=".42" stop-color="#ff7a12"/><stop offset=".68" stop-color="#d4145a"/><stop offset="1" stop-color="#3a0a5e"/></linearGradient>
+  </defs>
+</svg>
+<!-- ===== Header ===== -->
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a href="/" class="hdr__logo" aria-label="Opord Group home"><svg viewBox="0 0 640 100"><use href="#wordmark"/></svg></a>
+    <nav class="hdr__nav" aria-label="Main">
+      <a href="/close-protection-london/">Close Protection</a>
+      <a href="/event-security-london/">Event Security</a>
+      <a href="/#capabilities">Capabilities</a>
+      <a href="/#coverage">Coverage</a>
+      <a href="/#careers">Careers</a>
+    </nav>
+    <div class="hdr__right">
+      <a href="/#enquire" class="hdr__link">Enquire</a>
+      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu">
+  <button class="drawer__x" id="drawerX" aria-label="Close menu"></button>
+  <nav>
+    <a href="/close-protection-london/">Close Protection London</a>
+    <a href="/event-security-london/">Event Security London</a>
+    <a href="/wedding-security/">Wedding Security</a>
+    <a href="/residential-security-london/">Residential Security</a>
+    <a href="/executive-protection/">Executive Protection</a>
+    <a href="/close-protection-manchester/">Close Protection Manchester</a>
+    <a href="/#operations">Operations</a>
+    <a href="/#capabilities">Capabilities</a>
+    <a href="/#coverage">Coverage</a>
+    <a href="/#method">Our Method</a>
+    <a href="/#careers">Careers</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#enquire">Enquire</a>
+  </nav>
+  <div class="drawer__foot">
+    <a href="mailto:contact@opordgroup.com">contact@opordgroup.com</a><br>
+    <a href="tel:+447376041532">+44 7376 041532</a><br>
+    <a href="https://wa.me/447376041532" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</aside>
+<main id="top">
+<section class="panel page-hero">
+  <div class="panel__bg bg-ops"><div class="aurora" aria-hidden="true"></div><div class="radar" aria-hidden="true"><div class="sweep"></div><i style="left:62%;top:30%"></i><i style="left:30%;top:58%;animation-delay:1.2s"></i><i class="hot" style="left:56%;top:46%;animation-delay:.6s"></i></div></div>
+  <div class="panel__content">
+    <p class="kicker r">Legal</p>
+    <h1 class="title r d1">Privacy Notice</h1>
+    <div class="r d2"><a href="/#enquire" class="sx-btn">Make A Confidential Enquiry</a></div>
+  </div>
+</section>
+<section class="sec"><div class="wrap">
+  <p class="crumbs"><a href="/">Opord Group</a> / Privacy</p>
+  <div class="prose"><p class="intro">How Opord Group Ltd collects and uses personal information.</p><h2>Who we are</h2><p>Opord Group Ltd ("Opord Group", "we") is a private limited company registered in England and Wales (company number 15002017), registered office 26 Stroud Green Way, Croydon CR0 7BA. We are the controller of the personal data described in this notice. Contact us about privacy at contact@opordgroup.com.</p><h2>What we collect</h2><p>When you make an enquiry we collect your name, contact details, company (if any) and the details you choose to share about your security requirements. When you apply for a job we collect your name, contact details, the role, your SIA licence type, your experience and the background you give us. When we contact businesses about our services we use business contact details published by those businesses.</p><h2>How we use it and why</h2><p>We use enquiry details to respond to you and to plan and quote for services, because you have asked us to (steps before a contract) and, once you are a client, to deliver the contract. We use application details to assess your application, because it is in our legitimate interests to recruit suitable officers, and to meet legal duties such as checking SIA licences. We contact businesses about our services on the basis of our legitimate interests; every such email says who we are and how to opt out, and we stop when asked.</p><h2>Who we share it with</h2><p>We do not sell personal data. We share it only with service providers who help us run the business, such as our email and file storage provider (Microsoft) and our website host, and with officers assigned to an assignment on a need-to-know basis. We may disclose information where the law requires it.</p><h2>How long we keep it</h2><p>We keep enquiries that do not become work for up to 2 years, client records for 6 years after the work ends for legal and accounting reasons, and unsuccessful job applications for 6 months. Opt-out requests are kept on a suppression list so we do not contact you again.</p><h2>Your rights</h2><p>You can ask for a copy of your data, ask us to correct or delete it, object to our use of it (including for marketing, which we will stop), or ask us to restrict it. Email contact@opordgroup.com. If you are unhappy with how we handle your data you can complain to the Information Commissioner's Office at ico.org.uk.</p><h2>Cookies</h2><p>This website does not use advertising or tracking cookies. It loads fonts from Google Fonts, which receives your IP address to deliver them.</p><h2>Changes</h2><p>We may update this notice. The latest version is always on this page. Last updated 28 October 2026.</p></div>
+</div></section>
+</main>
+<footer class="foot">
+  <span class="legal">Opord Group Ltd · Registered in England &amp; Wales · Company No. 15002017 · Registered office: 26 Stroud Green Way, Croydon CR0 7BA</span>
+  <span>Opord Group © <span id="yr"></span></span>
+  <a href="mailto:contact@opordgroup.com">contact@opordgroup.com</a>
+  <a href="tel:+447376041532">+44 7376 041532</a>
+  <a href="https://wa.me/447376041532" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="/#careers">Careers</a>
+  <a href="/#enquire">Enquire</a>
+  <a href="/privacy/">Privacy</a>
+</footer>
+<a class="wa" href="https://wa.me/447376041532?text=Hello%20Opord%20Group%2C%20I%27d%20like%20to%20discuss%20security%20requirements." target="_blank" rel="noopener" aria-label="Contact Opord Group on WhatsApp">
+  <span class="wa__label">WhatsApp · 24/7</span>
+  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 5h20a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H14l-7 5v-5H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z"/><path fill="currentColor" stroke="none" d="M12.4 9.2c.4 0 .7.1.9.5l1 2.3c.1.3 0 .6-.2.8l-.7.8c-.2.2-.2.4 0 .7.7 1.2 1.7 2.2 3 2.9.2.1.5.1.7-.1l.8-.9c.2-.2.5-.3.8-.2l2.3 1c.3.2.5.4.4.8-.1 1.3-1.2 2.3-2.5 2.3-3.8-.2-7.4-3.8-7.6-7.6 0-1.3 1-2.3 2.1-2.5z"/></svg>
+</a>
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),lastY=0,yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
+  window.addEventListener('scroll',function(){var y=window.scrollY;hdr.classList.toggle('solid',y>window.innerHeight*.4);hdr.classList.toggle('hide',y>lastY&&y>120&&!document.body.classList.contains('menu'));var w=document.querySelector('.wa');if(w)w.classList.toggle('compact',y>window.innerHeight*.4);lastY=y;},{passive:true});
+  function menu(o){document.body.classList.toggle('menu',o)}
+  document.getElementById('burger').onclick=function(){menu(true)};document.getElementById('drawerX').onclick=function(){menu(false)};document.getElementById('scrim').onclick=function(){menu(false)};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.r').forEach(function(el){io.observe(el)});
+  function rng(s){return function(){s=(s*16807)%2147483647;return s/2147483647}}
+  var blocks=[[104,190,40,240],[144,318,156,110],[300,290,22,140],[612,318,96,110],[748,262,64,170],[822,210,38,220],[960,250,30,180],[1066,170,46,260],[1120,232,30,200],[690,300,40,130],[940,280,20,150],[560,330,34,100],[1196,250,34,180],[1330,250,34,180],[0,360,140,70],[330,350,114,80],[1080,350,40,80],[1400,330,40,100]];
+  document.querySelectorAll('.sky .wins').forEach(function(wg){var rnd=rng(7),h='';blocks.forEach(function(b){for(var y=b[1]+8;y<b[1]+b[3]-6;y+=9){for(var x=b[0]+5;x<b[0]+b[2]-5;x+=7){if(rnd()<.22){var o=(rnd()*.6+.2).toFixed(2);h+='<rect x="'+x+'" y="'+y+'" width="3" height="4" style="--o:'+o+';opacity:'+o+';animation-delay:'+(rnd()*6).toFixed(1)+'s" class="'+(rnd()<.25?'tw':'')+'"/>'}}}});wg.innerHTML=h;});
+  document.querySelectorAll('.streets').forEach(function(sg){var r=rng(11),h='';for(var i=0;i<140;i++){var x=r()*1440,y=r()*900,a=r()*Math.PI,l=60+r()*260;h+='<path d="M'+x.toFixed(0)+' '+y.toFixed(0)+'l'+(Math.cos(a)*l).toFixed(0)+' '+(Math.sin(a)*l).toFixed(0)+'"/>'}h+='<path stroke="rgba(255,255,255,.16)" stroke-width="2" d="M0 260C300 280 520 300 770 330S1100 300 1440 240M760 0C770 200 765 300 770 330S800 600 820 900M300 900C500 700 600 560 860 470M1060 0C1060 200 1060 300 1060 400S1000 700 960 900"/>';sg.innerHTML=h;});
+})();
+</script>
+</body>
+</html>
