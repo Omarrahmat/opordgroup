@@ -21,4 +21,7 @@ jobs:
           n INSIGHTS "$(curl -sSL -o /dev/null -w '%{http_code}' https://www.opordgroup.com/insights/)"
           n ARTICLE "$(curl -sSL https://www.opordgroup.com/insights/martyns-law-event-organisers/ | grep -o '<title>[^<]*' | head -1)"
           n NAVLINK "$(curl -sSL https://www.opordgroup.com/ | grep -c 'insights/')"
+          n HTTPS_apex "$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' https://opordgroup.com/ 2>&1 | head -c 200)"
+          n APEX_follow "$(curl -sSL -o /dev/null -w '%{http_code} %{url_effective}' https://opordgroup.com/ 2>&1 | head -c 200)"
+          n A_apex_1111 "$(dig +short A opordgroup.com @1.1.1.1 | tr '\n' ' ') | godaddy-ns: $(dig +short A opordgroup.com @ns43.domaincontrol.com | tr '\n' ' ')"
           n PAGE_cp "$(curl -sSL -o /dev/null -w '%{http_code}' https://www.opordgroup.com/close-protection-london/)"
