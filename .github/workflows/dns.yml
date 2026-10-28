@@ -25,4 +25,5 @@ jobs:
           n APEX_follow "$(curl -sSL -o /dev/null -w '%{http_code} %{url_effective}' https://opordgroup.com/ 2>&1 | head -c 200)"
           n A_apex_1111 "$(dig +short A opordgroup.com @1.1.1.1 | tr '\n' ' ') | godaddy-ns: $(dig +short A opordgroup.com @ns43.domaincontrol.com | tr '\n' ' ')"
           n STROUD "home=$(curl -sSL https://www.opordgroup.com/ | grep -c -i stroud) privacy=$(curl -sSL https://www.opordgroup.com/privacy/ | grep -c -i stroud) cp=$(curl -sSL https://www.opordgroup.com/close-protection-london/ | grep -c -i stroud)"
+          n REDIRECT_JS "$(curl -sSL http://www.opordgroup.com/ | grep -c 'location.protocol')"
           n PAGE_cp "$(curl -sSL -o /dev/null -w '%{http_code}' https://www.opordgroup.com/close-protection-london/)"
