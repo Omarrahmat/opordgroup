@@ -5,12 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "== A opordgroup.com"; dig +short A opordgroup.com @8.8.8.8
-          echo "== CNAME www"; dig +short CNAME www.opordgroup.com @8.8.8.8
-          echo "== A www"; dig +short A www.opordgroup.com @8.8.8.8
-          echo "== MX"; dig +short MX opordgroup.com @8.8.8.8
-          echo "== NS"; dig +short NS opordgroup.com @8.8.8.8
-          echo "== HTTP www"; curl -sS -o /dev/null -w "%{http_code} %{redirect_url}\n" http://www.opordgroup.com/ || true
-          echo "== HTTP apex"; curl -sS -o /dev/null -w "%{http_code} %{redirect_url}\n" http://opordgroup.com/ || true
-          echo "== HTTPS www"; curl -sS -o /dev/null -w "%{http_code}\n" https://www.opordgroup.com/ || echo "https not ready"
-          echo "== TITLE"; curl -sSL http://www.opordgroup.com/ | grep -o '<title>[^<]*' || true
+          n(){ echo "::notice title=$1::$(echo "$2" | tr '\n' ' ')"; }
+          n A_apex "$(dig +short A opordgroup.com @8.8.8.8)"
+          n CNAME_www "$(dig +short CNAME www.opordgroup.com @8.8.8.8)"
+          n A_www "$(dig +short A www.opordgroup.com @8.8.8.8)"
+          n MX "$(dig +short MX opordgroup.com @8.8.8.8)"
+          n TXT "$(dig +short TXT opordgroup.com @8.8.8.8)"
+          n NS "$(dig +short NS opordgroup.com @8.8.8.8)"
+          n HTTP_www "$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' http://www.opordgroup.com/ 2>&1)"
+          n HTTP_apex "$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' http://opordgroup.com/ 2>&1)"
+          n HTTPS_www "$(curl -sS -o /dev/null -w '%{http_code}' https://www.opordgroup.com/ 2>&1)"
+          n TITLE "$(curl -sSL http://www.opordgroup.com/ | grep -o '<title>[^<]*' | head -1)"
+          n PAGE_cp "$(curl -sSL -o /dev/null -w '%{http_code}' http://www.opordgroup.com/close-protection-london/)"
