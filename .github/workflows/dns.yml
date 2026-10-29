@@ -28,4 +28,5 @@ jobs:
           n REDIRECT_JS "$(curl -sSL http://www.opordgroup.com/ | grep -c 'location.protocol')"
           n CERT_names "$(echo | openssl s_client -connect www.opordgroup.com:443 -servername www.opordgroup.com 2>/dev/null | openssl x509 -noout -ext subjectAltName 2>/dev/null | tr -d '\n' | head -c 200)"
           n HTTP_www_redirect "$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' http://www.opordgroup.com/ 2>&1)"
+          n PHONE "$(for u in / /close-protection-london/ /event-security-london/ /wedding-security/ /residential-security-london/ /executive-protection/ /close-protection-manchester/ /privacy/ /insights/ /insights/martyns-law-event-organisers/; do printf '%s=%s ' "$u" "$(curl -sSL https://www.opordgroup.com$u | grep -c -i -E '7376|wa\.me|whatsapp')"; done)"
           n PAGE_cp "$(curl -sSL -o /dev/null -w '%{http_code}' https://www.opordgroup.com/close-protection-london/)"
