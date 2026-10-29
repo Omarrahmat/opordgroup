@@ -34,7 +34,6 @@
   "areaServed": [{"@type":"City","name":"London"},{"@type":"Country","name":"United Kingdom"}],
   "address": {"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"},
   "email": "contact@opordgroup.com",
-  "telephone": "+447376041532",
   "openingHours": "Mo-Su 00:00-23:59",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -423,9 +422,7 @@ body.menu .drawer{transform:none}
     <a href="#enquire">Enquire</a>
   </nav>
   <div class="drawer__foot">
-    <a href="mailto:contact@opordgroup.com">contact@opordgroup.com</a><br>
-    <a href="tel:+447376041532">+44 7376 041532</a><br>
-    <a href="https://wa.me/447376041532" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="mailto:contact@opordgroup.com">contact@opordgroup.com</a>
   </div>
 </aside>
 
@@ -694,9 +691,7 @@ body.menu .drawer{transform:none}
     <h2 class="title r d1">Speak To Our Team</h2>
     <p class="lead r d2">Every enquiry is handled in strict confidence by our 24/7 operations desk. Urgent requirements are answered straight away.</p>
     <div class="spec spec--kv">
-      <div class="spec__row"><h3>Email</h3><p><a href="mailto:contact@opordgroup.com">contact@opordgroup.com</a></p></div>
-      <div class="spec__row"><h3>Telephone · 24/7</h3><p><a href="tel:+447376041532">+44 7376 041532</a></p></div>
-      <div class="spec__row"><h3>WhatsApp</h3><p><a href="https://wa.me/447376041532" target="_blank" rel="noopener">+44 7376 041532</a></p></div>
+      <div class="spec__row"><h3>Email · 24/7</h3><p><a href="mailto:contact@opordgroup.com">contact@opordgroup.com</a></p></div>
       <div class="spec__row"><h3>Headquarters</h3><p>London, United Kingdom</p></div>
     </div>
     <form class="form r" id="enquiryForm" novalidate>
@@ -715,7 +710,6 @@ body.menu .drawer{transform:none}
       <label class="consent"><input type="checkbox" required> I agree to Opord Group contacting me about this enquiry. See our <a href="/privacy/" style="text-decoration:underline">privacy notice</a>.</label>
       <div class="form__actions">
         <button class="sx-btn sx-btn--fill" type="submit">Send Enquiry</button>
-        <button class="sx-btn" type="button" id="waSend">Send Via WhatsApp</button>
       </div>
       <div class="form__ok">Thank you. Your email app has opened with your enquiry ready to send.</div>
     </form>
@@ -743,22 +737,16 @@ body.menu .drawer{transform:none}
   <span class="legal">Opord Group Ltd · Registered in England &amp; Wales · Company No. 15002017</span>
   <span>Opord Group © <span id="yr"></span></span>
   <a href="mailto:contact@opordgroup.com">contact@opordgroup.com</a>
-  <a href="tel:+447376041532">+44 7376 041532</a>
-  <a href="https://wa.me/447376041532" target="_blank" rel="noopener">WhatsApp</a>
   <a href="/insights/">Insights</a>
   <a href="#careers">Careers</a>
   <a href="#enquire">Enquire</a>
   <a href="/privacy/">Privacy</a>
 </footer>
 
-<a class="wa" href="https://wa.me/447376041532?text=Hello%20Opord%20Group%2C%20I%27d%20like%20to%20discuss%20security%20requirements." target="_blank" rel="noopener" aria-label="Contact Opord Group on WhatsApp">
-  <span class="wa__label">WhatsApp · 24/7</span>
-  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 5h20a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H14l-7 5v-5H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z"/><path fill="currentColor" stroke="none" d="M12.4 9.2c.4 0 .7.1.9.5l1 2.3c.1.3 0 .6-.2.8l-.7.8c-.2.2-.2.4 0 .7.7 1.2 1.7 2.2 3 2.9.2.1.5.1.7-.1l.8-.9c.2-.2.5-.3.8-.2l2.3 1c.3.2.5.4.4.8-.1 1.3-1.2 2.3-2.5 2.3-3.8-.2-7.4-3.8-7.6-7.6 0-1.3 1-2.3 2.1-2.5z"/></svg>
-</a>
 
 <script>
 (function(){
-  var EMAIL='contact@opordgroup.com', WA='447376041532';
+  var EMAIL='contact@opordgroup.com';
   document.getElementById('yr').textContent=new Date().getFullYear();
 
   // Header: hide on scroll down, show on scroll up
@@ -766,7 +754,6 @@ body.menu .drawer{transform:none}
   window.addEventListener('scroll',function(){
     var y=window.scrollY;
     hdr.classList.toggle('solid',y>window.innerHeight*.6);
-    document.querySelector('.wa').classList.toggle('compact',y>window.innerHeight*.5);
     hdr.classList.toggle('hide',y>lastY&&y>120&&!document.body.classList.contains('menu'));
     lastY=y;
   },{passive:true});
@@ -834,10 +821,6 @@ body.menu .drawer{transform:none}
   }
   wire('enquiryForm','Security Enquiry');
   wire('careersForm','Job Application');
-  document.getElementById('waSend').addEventListener('click',function(){
-    var lines=['Hello Opord Group, new enquiry:'].concat(collect(document.getElementById('enquiryForm')));
-    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
-  });
 })();
 </script>
 </body>
